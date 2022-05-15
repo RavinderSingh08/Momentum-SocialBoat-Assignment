@@ -70,7 +70,19 @@ const Header = () => {
           </Toolbar>
         </Container>
       </AppBar>
-      {searchText === "" ? null : <Content name={searchText} />}
+      {searchText === "" ? (
+        <h2
+          style={{
+            textAlign:"center",
+            textTransform: "uppercase",
+            marginTop:"15vh"
+          }}
+        >
+          Use searchbar for results
+        </h2>
+      ) : (
+        <Content name={searchText} />
+      )}
     </ThemeProvider>
   );
 };
